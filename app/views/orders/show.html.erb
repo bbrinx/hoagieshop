@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<p><%= @order.id %></p>
+
+<h2>Order:</h2>
+<ul>
+  <% @order.ingredients.each do |ingredient| %>
+    <li><%= ingredient.name %></li>
+  <% end %>
+</ul>
+
+
+<p><%= @order.address %></p>
+<p><%= @order.price_cents %></p>
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
