@@ -29,18 +29,18 @@ ActiveRecord::Schema.define(version: 20170127184513) do
     t.string   "cat"
   end
 
+  create_table "ingredients_orders", force: :cascade do |t|
+    t.integer "order_id",      null: false
+    t.integer "ingredient_id", null: false
+    t.index ["ingredient_id"], name: "index_ingredients_orders_on_ingredient_id"
+    t.index ["order_id"], name: "index_ingredients_orders_on_order_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer  "price_cents"
     t.string   "address"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "orders_ingredients", force: :cascade do |t|
-    t.integer "orders_id",      null: false
-    t.integer "ingredients_id", null: false
-    t.index ["ingredients_id"], name: "index_orders_ingredients_on_ingredients_id"
-    t.index ["orders_id"], name: "index_orders_ingredients_on_orders_id"
   end
 
 end
