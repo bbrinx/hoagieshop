@@ -8,8 +8,7 @@
   <% end %>
 </ul>
 
-
-<p><%= @order.address %></p>
-<p><%= @order.price_cents %></p>
+<p>Shipping Address: <%= @order.address %></p>
+<p>Total: <%= @order.price_cents / 100.00%>€</p>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
