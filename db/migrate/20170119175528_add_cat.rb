@@ -1,5 +1,5 @@
 class AddCat < ActiveRecord::Migration[5.0]
   def change
-      add_column :ingedients, :cat, :string
+      add_column :ingredients, :cat, :string
   end
 end

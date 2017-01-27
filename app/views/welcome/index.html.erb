@@ -7,12 +7,12 @@
     <th>Amount: </th>
     <th>Categorie: </th>
   </tr>
-<% @data.each do |data| %>
+<% @ingredients.each do |ingredient| %>
   <tr>
-    <td><%= data.name %></td>
-    <td><%= data.price %></td>
-    <td><%= data.amount %></td>
-    <td><%= data.cat %></td>
+    <td><%= ingredient.name %></td>
+    <td><%= ingredient.price %></td>
+    <td><%= ingredient.amount %></td>
+    <td><%= ingredient.cat %></td>
   </tr>
 <% end %>
 </table>

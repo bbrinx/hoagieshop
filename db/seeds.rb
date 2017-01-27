@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ingedient.create(name: 'cucumber', price: 0.00, amount: 900, cat: 'v')
+Ingredient.create(name: 'cucumber', price: 0.00, amount: 900, cat: 'v')

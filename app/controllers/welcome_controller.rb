@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
 
-    @data = Ingedient.all
+    @ingredients = Ingredient.all
 
   end
 end
