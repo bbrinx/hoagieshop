@@ -8,7 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+    <body class="<%= @home_page ? 'homepage' : ''%>">
+      <div class="start">
     <%= yield %>
+      </div>
   </body>
 </html>

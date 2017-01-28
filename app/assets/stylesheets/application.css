@@ -13,3 +13,152 @@
  *= require_tree .
  *= require_self
  */
+
+
+body{
+margin: 0;        
+}
+
+
+
+.start::before {
+    content: "";
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('/assets/bgSub.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-color: #222;
+    width: 100vw;
+    height: 40vh;  
+}
+
+.homepage .start::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('/assets/bgSub.jpg');
+    background-size: cover;
+    background-color: #222;
+    width: 100vw;
+    height: 100vh;  
+}
+
+
+
+h1, h2 , label , .headline, input, .btn2{
+    color: #2a2a2a;
+    letter-spacing: 0.2em;
+    font-family: "Helvetica";
+    font-weight: 500;
+    margin:0;
+    display: inline-block;
+
+}
+
+
+h1 , .headline{
+    font-size: 6em;  
+    display: block;
+}
+
+h2{
+    display: block;
+    padding: 10px 0 10px 0;
+}
+
+.headline{
+    position: absolute;
+    margin-left: 14%;
+    margin-top: 7%;
+    text-shadow: 5px 5px 12px #000000;
+    color: white;
+}
+
+.btn {
+    display:inline-block;
+    float:right;
+    padding: 0.5em;
+    font-size: 1.5em;
+    border: solid;
+    border-color: white;
+    border-radius: 30px;
+    margin-right: 2em;
+}
+ .btn a {
+   color: white; 
+   text-decoration: none;
+   font-family: "Helvetica";
+   letter-spacing: 0.2em;   
+}
+
+.checkbox label{
+    color: #2a2a2a;
+    padding-left: 0.5em;
+    padding-right: 0.5em; 
+}
+
+.form , .orderTitle{
+    margin-top: 2%;
+    margin-left: 10%;
+}
+input{
+border: 0;
+border-bottom: 1px solid;
+font-size: 24px;
+font-weight: 100;
+outline: 0;
+}
+
+.address{
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.btn2{
+    float:right;
+    font-size: 26px;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    border: 2px solid;
+    border-radius: 30px;
+    color: #2a2a2a;
+    background-color: white; 
+    text-decoration: none;
+    padding:1em;
+    font-weight: 100;
+    font-size: 15px;
+      cursor: pointer;
+}
+
+.orderNumber{
+    display: inline-block;
+}
+
+.idNumber{
+    font-size: 25px;
+}
+
+.receipt {
+    margin: 0 10%;
+}
+.receipt p{
+    font-size: 30px;
+}
+
+.receipt ul li {
+   font-size: 20px; 
+}
+
+.orderSuccess {
+     color:darkgreen;
+    font-size: 50px;
+   margin: 2% 0 0 10%;
+}
+

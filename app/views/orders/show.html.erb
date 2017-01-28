@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
-<p><%= @order.id %></p>
+<p id="notice" class="orderSuccess"><%= notice %></p>
 
-<h2>Order:</h2>
+</div>
+
+<div class="receipt">
+<h1>Your Order #<%= @order.id %>:</h1>
 <ul>
   <% @order.ingredients.each do |ingredient| %>
     <li><%= ingredient.name %></li>
@@ -10,5 +12,6 @@
 
 <p>Shipping Address: <%= @order.address %></p>
 <p>Total: <%= @order.price_cents / 100.00%>€</p>
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Edit', edit_order_path(@order), class: "btn2" %> 
+<%= link_to 'Back', orders_path, class: "btn2" %>
+</div>

@@ -10,30 +10,30 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="form">
+  <h2 class="address">Street Address:</h2>
   <%= f.text_field :address %>
 
   <h2>Bread:</h2>
-  <%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'b'"), :id, :name) %>
+  <p class="checkbox"><%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'b'"), :id, :name) %></p>
 
 
   <h2>Main Ingredients:</h2>
-  <%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'm'"), :id, :name) %>
+  <p class="checkbox"><%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'm'"), :id, :name) %></p>
 
 
-  <h2>Vegetables</h2>
-  <%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'v'"), :id, :name) %>
+  <h2>Vegetables:</h2>
+   <p class="checkbox"><%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'v'"), :id, :name) %></p>
 
 
-  <h2>Condiments</h2>
-  <%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'c'"), :id, :name) %>
+  <h2>Condiments:</h2>
+   <p class="checkbox"><%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'c'"), :id, :name) %></p>
 
 
-  <h2>Desert</h2>
-  <%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'd'"), :id, :name) %>
+  <h2>Desert:</h2>
+   <p class="checkbox"><%= f.collection_check_boxes(:ingredient_ids, Ingredient.where("cat = 'd'"), :id, :name) %></p>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <%= f.submit "Buy Hoagie", :class => "btn2" %>
+</div>
 <% end %>
